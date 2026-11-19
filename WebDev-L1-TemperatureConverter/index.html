@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temperature Converter</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="page">
+    <section class="converter-card" aria-labelledby="converter-title">
+      <div class="card-heading">
+        <div class="temperature-mark" aria-hidden="true">°</div>
+        <div>
+          <p>UTILITY / 01</p>
+          <h1 id="converter-title">Temperature<br>Converter</h1>
+        </div>
+      </div>
+
+      <form id="converter-form" novalidate>
+        <label for="temperature">Enter temperature</label>
+        <div class="input-row">
+          <input id="temperature" name="temperature" type="text" inputmode="decimal" placeholder="e.g. 25" autocomplete="off" aria-describedby="input-error">
+          <select id="input-unit" name="input-unit" aria-label="Input temperature unit">
+            <option value="celsius">°C — Celsius</option>
+            <option value="fahrenheit">°F — Fahrenheit</option>
+            <option value="kelvin">K — Kelvin</option>
+          </select>
+        </div>
+        <p id="input-error" class="error" role="alert" aria-live="polite"></p>
+        <button type="submit">Convert temperature <span aria-hidden="true">→</span></button>
+      </form>
+
+      <section class="results" id="results" aria-live="polite" aria-label="Conversion results">
+        <p class="results-label">CONVERTED VALUES</p>
+        <article><span>Celsius</span><strong id="celsius-result">—</strong></article>
+        <article><span>Fahrenheit</span><strong id="fahrenheit-result">—</strong></article>
+        <article><span>Kelvin</span><strong id="kelvin-result">—</strong></article>
+      </section>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

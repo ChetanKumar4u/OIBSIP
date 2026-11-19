@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A focused daily planner for tasks, progress, and small wins.">
+  <title>Daybook — A little more in order</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <main class="layout">
+    <aside class="sidebar">
+      <a class="logo" href="#" aria-label="Daybook home"><span>✳</span> daybook</a>
+      <div class="side-note"><p class="side-label">YOUR SPACE</p><p>Make room for<br>what matters.</p></div>
+      <div class="side-bottom"><span class="avatar" aria-hidden="true">D</span><div><strong>My day</strong><small>One step at a time</small></div></div>
+    </aside>
+
+    <section class="main-content" aria-labelledby="page-title">
+      <header class="page-header">
+        <div><p class="eyebrow">YOUR PERSONAL PLANNER</p><h1 id="page-title">A little more in order.</h1></div>
+        <time id="today-date"></time>
+      </header>
+
+      <form class="add-form" id="add-form">
+        <label class="sr-only" for="task-input">Add a task</label>
+        <input id="task-input" name="task" type="text" maxlength="180" placeholder="What would you like to get done?" autocomplete="off" required>
+        <button type="submit"><span aria-hidden="true">+</span> Add task</button>
+      </form>
+      <p id="status-message" class="status-message" role="status" aria-live="polite"></p>
+
+      <section class="task-section" aria-labelledby="pending-heading">
+        <div class="list-heading"><h2 id="pending-heading">Pending</h2><span class="count" id="pending-count">0 pending</span></div>
+        <ul class="task-list" id="pending-list"></ul>
+        <p class="empty-state" id="pending-empty">Nothing waiting here. Add a task when you're ready.</p>
+      </section>
+
+      <section class="task-section completed-section" aria-labelledby="completed-heading">
+        <div class="list-heading"><h2 id="completed-heading">Completed</h2><span class="count" id="completed-count">0 completed</span></div>
+        <ul class="task-list" id="completed-list"></ul>
+        <p class="empty-state" id="completed-empty">Your finished tasks will appear here.</p>
+      </section>
+      <footer>Small steps count. Keep going.</footer>
+    </section>
+  </main>
+</body>
+</html>

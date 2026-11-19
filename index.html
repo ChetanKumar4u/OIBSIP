@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Browser demos for OIBSIP Web Development and Designing internship projects.">
+  <title>OIBSIP Web Development Projects</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+      color: #172033;
+      background: #f4f6fb;
+    }
+
+    body {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 48px 24px;
+    }
+
+    header {
+      margin-bottom: 36px;
+    }
+
+    h1 {
+      margin-bottom: 8px;
+      font-size: clamp(2rem, 5vw, 3rem);
+    }
+
+    header p, .note {
+      color: #526078;
+      line-height: 1.6;
+    }
+
+    h2 {
+      margin-top: 32px;
+      font-size: 1.25rem;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      display: block;
+      padding: 20px;
+      border: 1px solid #dfe4ee;
+      border-radius: 12px;
+      background: #fff;
+      color: inherit;
+      text-decoration: none;
+    }
+
+    a.card:hover, a.card:focus-visible {
+      border-color: #526be8;
+      outline: 2px solid #526be8;
+      outline-offset: 2px;
+    }
+
+    .card h3 {
+      margin: 0 0 8px;
+      font-size: 1.05rem;
+    }
+
+    .card p {
+      margin: 0;
+      color: #526078;
+      line-height: 1.5;
+    }
+
+    .note {
+      margin-top: 24px;
+      padding: 16px;
+      border-left: 4px solid #526be8;
+      background: #fff;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>OIBSIP Web Development Projects</h1>
+    <p>Browser demos from the Oasis Infobyte Web Development &amp; Designing internship track.</p>
+  </header>
+
+  <main>
+    <h2>Level 1</h2>
+    <section class="projects" aria-label="Level 1 projects">
+      <a class="card" href="./WebDev-L1-LandingPage/">
+        <h3>Responsive Landing Page</h3>
+        <p>A responsive page layout built with HTML and CSS.</p>
+      </a>
+      <a class="card" href="./WebDev-L1-Portfolio/">
+        <h3>Personal Portfolio</h3>
+        <p>A portfolio site showcasing skills and projects.</p>
+      </a>
+      <a class="card" href="./WebDev-L1-TemperatureConverter/">
+        <h3>Temperature Converter</h3>
+        <p>Convert temperatures with an interactive browser tool.</p>
+      </a>
+    </section>
+
+    <h2>Level 2</h2>
+    <section class="projects" aria-label="Level 2 projects">
+      <a class="card" href="./WebDev-L2-Calculator/">
+        <h3>Calculator</h3>
+        <p>Perform calculations and chain operations.</p>
+      </a>
+      <a class="card" href="./WebDev-L2-TributePage/">
+        <h3>A. P. J. Abdul Kalam Tribute</h3>
+        <p>A tribute page about the life and work of Dr. Kalam.</p>
+      </a>
+      <a class="card" href="./WebDev-L2-TodoApp/">
+        <h3>To-do App</h3>
+        <p>Track pending and completed tasks in your browser.</p>
+      </a>
+    </section>
+
+    <h2>Server-based projects</h2>
+    <section class="projects" aria-label="Server-based projects">
+      <a class="card" href="https://github.com/ChetanKumar4u/OIBSIP/tree/main/WebDev-L2-LoginAuthenticationSystem">
+        <h3>Level 2: Login Authentication</h3>
+        <p>Express app; requires a Node.js server to run.</p>
+      </a>
+      <a class="card" href="https://github.com/ChetanKumar4u/OIBSIP/tree/main/WebDev-L3-PizzaDelivery">
+        <h3>Level 3: Pizza Delivery</h3>
+        <p>Full-stack app; requires a Node.js API and MongoDB.</p>
+      </a>
+    </section>
+
+    <p class="note">The six static projects above run on GitHub Pages. The login and pizza projects are source-linked because GitHub Pages cannot run their server or database; deploy those separately to make them live.</p>
+  </main>
+</body>
+</html>
